@@ -3,6 +3,7 @@ package com.example.cryptocurrencyapp.presentation.detail
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
 import com.example.cryptocurrencyapp.common.Constants
 import com.example.cryptocurrencyapp.domain.use_cases.get_coin.GetCoinUseCase
 import com.example.cryptocurrencyapp.presentation.list.CoinListState
@@ -11,7 +12,7 @@ import javax.inject.Inject
 class CoinDetailViewModel @Inject constructor(
     private val getCoinUseCase: GetCoinUseCase,
     private val savedStateHandle: SavedStateHandle
-) {
+): ViewModel() {
 
     private val _state = mutableStateOf(CoinDetailState())
 
