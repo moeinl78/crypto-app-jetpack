@@ -1,9 +1,9 @@
 package com.example.cryptocurrencyapp.data.remote.dto
 
-import com.example.cryptocurrencyapp.domain.model.Item
+import com.example.cryptocurrencyapp.domain.model.Coins
 import com.google.gson.annotations.SerializedName
 
-data class ItemDto(
+data class CoinsDto(
     val id: String,
     @SerializedName("is_active")
     val isActive: Boolean,
@@ -14,8 +14,8 @@ data class ItemDto(
     val symbol: String,
     val type: String
 ) {
-    fun toItem(): Item {
-        return Item(
+    fun toItem(): Coins {
+        return Coins(
             id = id,
             isActive = isActive,
             name = name,
